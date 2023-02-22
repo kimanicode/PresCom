@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
+import LocalPhoneTwoToneIcon from '@mui/icons-material/LocalPhoneTwoTone';
+import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone';
 
 const ContactUs = () => {
   return (
@@ -22,13 +25,13 @@ const ContactUs = () => {
       <ContactInfo>
         <ContactInfoTitle>Contact Information</ContactInfoTitle>
         <p>
-          <strong>Address:</strong> 123 Main St. Anytown, USA 12345
+          <strong><HomeTwoToneIcon/></strong> Kahawa Sukari, Nairobi
         </p>
         <p>
-          <strong>Phone:</strong> (123) 456-7890
+          <strong><LocalPhoneTwoToneIcon/></strong> (254) 456-7890
         </p>
         <p>
-          <strong>Email:</strong> info@prescom.com
+          <strong><EmailTwoToneIcon/></strong> info@prescom.com
         </p>
       </ContactInfo>
     </Container>
@@ -62,6 +65,7 @@ const Form = styled.form`
 const FormTitle = styled.h2`
   font-size: 2rem;
   margin-bottom: 1rem;
+  color:#0077cc
 `;
 
 const FormField = styled.div`
@@ -73,11 +77,13 @@ const FormField = styled.div`
 const Label = styled.label`
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  color:#E98A15;
+  font-weight:bold;
 `;
 
 const Input = styled.input`
   padding: 0.5rem;
-  border: none;
+  border: solid 0.1px;
   border-radius: 0.25rem;
   font-size: 1rem;
   margin-bottom: 1rem;
@@ -85,7 +91,7 @@ const Input = styled.input`
 
 const TextArea = styled.textarea`
   padding: 0.5rem;
-  border: none;
+  border: solid 0.5px;
   border-radius: 0.25rem;
   font-size: 1rem;
   height: 200px;
@@ -110,6 +116,12 @@ const SubmitButton = styled.button`
 const ContactInfo = styled.div`
   width: 40%;
   max-width: 400px;
+  display:flex;
+  flex-direction: column;
+  justify-content:space-betweeen;
+  margin-top:12%;
+
+  
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -120,6 +132,7 @@ const ContactInfo = styled.div`
 const ContactInfoTitle = styled.h3`
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color:#0077cc
 `;
 
 export default ContactUs;

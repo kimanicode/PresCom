@@ -1,31 +1,3 @@
-/* .main{
-    background-image: url("/public/images/image4.jpg");
-    background-size: cover;
-    width: 100%;
-    height  : 90vh;
-    background-size:cover;
-    background-position:center;
-    background-repeat: no-repeat;
-}
-.info{
-    text-align: center;
-    padding: 200px;
-    color:#FFB17A;
-}
-button{
-    width: 200px;
-    height: 50px;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 10px;
-    background-color: #E98A15;
-    color: white;
-    margin-top: 30px;
-}
-button:hover{
-    background-color: #FFB17A;
-    color:black;
-} */
 .hero {
     position: relative;
     height: 500px;

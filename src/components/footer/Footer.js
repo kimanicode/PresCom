@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 
 const FooterWrapper = styled.footer`
@@ -36,7 +37,7 @@ const Col = styled.div`
 `;
 
 const Heading = styled.h4`
-  color: #fff;
+  color: #0077cc;
   font-weight: bold;
 `;
 
@@ -48,10 +49,22 @@ const List = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+  @media screen and (max-width: 768px) {
+    display:flex;
+  }
 `;
 
 const ListItem = styled.li`
   margin-bottom: 10px;
+  
+  @media screen and (max-width: 768px) {
+    display:flex;
+    
+  }
+
+  @media screen and (max-width: 480px) {
+    display:flex;
+  }
 `;
 
 const Link = styled.a`
@@ -65,6 +78,9 @@ const Link = styled.a`
 const Icon = styled.i`
   font-size: 24px;
   margin-right: 5px;
+  @media screen and (max-width: 768px) {
+    margin-right: 5px;
+  }
 `;
 
 const Footer = () => {
@@ -95,6 +111,12 @@ const Footer = () => {
                 <Link href="#">
                   <Icon className="fab fa-instagram" />
                   <InstagramIcon/>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link href="#">
+                  <Icon className="fab fa-instagram" />
+                  <WhatsAppIcon/>
                 </Link>
               </ListItem>
             </List>

@@ -1,41 +1,48 @@
 import React from 'react';
 import styled from 'styled-components';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const projectsData = [
   {
     id: 1,
-    title: 'Project 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada, quam vel bibendum volutpat.',
+    location: `GTC Complex , Nairobi`,
+    title: 'CCTV and WIFI Installation',
+    description: 'Supply, Install, Test and Commission',
     imageUrl: 'https://cdn.pixabay.com/photo/2017/08/01/01/59/concrete-2562781_960_720.jpg',
   },
   {
     id: 2,
-    title: 'Project 2',
-    description: 'Nulla elementum pretium mauris, eu semper mauris mattis vitae. Nunc id ullamcorper turpis.',
-    imageUrl: 'https://picsum.photos/id/238/300/200',
+    location: 'GTC Complex , Nairobi',
+    title: 'LAN and WAN',
+    description: 'Design ,supply , install, test and commission .',
+    imageUrl: 'https://cdn.pixabay.com/photo/2018/05/12/12/33/building-3393191__340.jpg',
   },
   {
     id: 3,
-    title: 'Project 3',
-    description: 'Etiam rutrum sem ut risus eleifend, at laoreet nibh semper. Fusce eu tincidunt tortor.',
-    imageUrl: 'https://picsum.photos/id/239/300/200',
+    location: 'Phoenix Aviation , Nairobi',
+    title: 'LAN,WIFI and IP Telephony',
+    description: 'Support ,Service and Maintenance.',
+    imageUrl: 'https://cdn.pixabay.com/photo/2015/04/17/01/31/london-726443_960_720.jpg',
   },
   {
     id: 4,
-    title: 'Project 4',
-    description: 'Fusce id justo id ipsum maximus convallis. Morbi bibendum purus nec lectus tempus, in convallis augue pretium.',
-    imageUrl: 'https://picsum.photos/id/240/300/200',
+    title: 'Maintenance',
+    location : 'St. Andrews college of Theology and Development, Kirinyaga',
+    description: 'Maintenance of computers, Printers,servers, scanners, Projectors and other ICT equipment',
+    imageUrl: 'https://cdn.pixabay.com/photo/2021/02/09/17/09/mantenimiento-5999189__340.jpg',
   },
   {
     id: 5,
-    title: 'Project 5',
-    description: 'Donec at euismod neque. Nulla malesuada pharetra nisi, eu maximus urna commodo ut.',
-    imageUrl: 'https://picsum.photos/id/241/300/200',
+    location: 'St. Mary’s School, Nairobi',
+    title: 'Supply of servers',
+    description: 'Supply, Install, Test and Commission.',
+    imageUrl: 'https://cdn.pixabay.com/photo/2017/03/20/21/00/server-2160321__340.jpg',
   },
   {
     id: 6,
-    title: 'Project 6',
-    description: 'Aliquam erat volutpat. Vestibulum nec rutrum sapien, at finibus quam.',
+    location: 'Kiambu County Offices',
+    title: 'WIFI Installation',
+    description: 'Supply, Install, Test and Commissioning',
     imageUrl: 'https://picsum.photos/id/242/300/200',
   },
 ];
@@ -48,7 +55,12 @@ const Projects = () => {
         {projectsData.map((project) => (
           <ProjectCard key={project.id}>
             <ProjectImage src={project.imageUrl} alt={project.title} />
-            <ProjectTitle>{project.title}</ProjectTitle>
+            <ProjectTitle>
+              {project.title}
+            </ProjectTitle>
+            <ProjectLocation><LocationOnIcon  />
+              {project.location}
+            </ProjectLocation>
             <ProjectDescription>{project.description}</ProjectDescription>
           </ProjectCard>
         ))}
@@ -58,7 +70,7 @@ const Projects = () => {
 };
 
 const ProjectsContainer = styled.div`
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
 `;
@@ -67,18 +79,21 @@ const ProjectsHeader = styled.h1`
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
+  color:#0077cc
 `;
 
 const ProjectsList = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  
 `;
 
 const ProjectCard = styled.div`
   border: 1px solid #ccc;
   border-radius: 0.25rem;
   overflow: hidden;
+  
 `;
 
 const ProjectImage = styled.img`
@@ -90,6 +105,12 @@ const ProjectImage = styled.img`
 const ProjectTitle = styled.h2`
   font-size: 1.5rem;
   margin: 1rem;
+  color: #0077cc;
+`;
+const ProjectLocation = styled.h2`
+  font-size: 1rem;
+  margin: 1rem;
+  color: #E98A15;
 `;
 
 const ProjectDescription = styled.p`
@@ -97,6 +118,7 @@ const ProjectDescription = styled.p`
   line-height: 1.5;
   color: #333;
   margin: 1rem;
+  
 `;
 
 export default Projects;

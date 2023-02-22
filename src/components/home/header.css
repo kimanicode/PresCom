@@ -1,41 +1,3 @@
-/* .header-wrapper{
-    background-color: #50B2C0;
-    display: flex;
-    justify-content: space-between;
-    height: 70px;
-    width: 100%;
-    align-items: center;
-   
-
-}
-.logo{
-    margin-left: 5%;
-    color: #FFB17A;
-}
-ul{
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-    margin-right: 20%;
-   
-    
-}
-li{
-    padding-left: 10px;
-    text-align: center;
-}
-a{
-    text-decoration: none;
-    color: #0B2545;
-    font-size: 18px;
-}
-a:hover{
-    color: #FF4000;
-} */
-/* Header styles */
-
-/* Header styles */
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -78,8 +40,8 @@ a:hover{
   
   .header-nav-item a {
     display: block;
-    color: #333;
-    text-decoration: none;
+    font-size: 1.2rem;
+        text-decoration: none;
   }
   
   .header-menu {

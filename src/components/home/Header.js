@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Logo from './image1.jpg';
 
@@ -95,10 +96,13 @@ const NavItem = styled.li`
 
 const NavLink = styled.a`
   display: block;
-  color: black;
+  color:#202C59;
   font-weight:bold;
   font-size: 18px;
   text-decoration: none;
+  &:hover{
+    color: #E98A15;
+  }
 `;
 
 const MenuButton = styled.button`
