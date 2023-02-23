@@ -28,7 +28,7 @@ const ContactUs = () => {
           <strong><HomeTwoToneIcon/></strong> Kahawa Sukari, Nairobi
         </p>
         <p>
-          <strong><LocalPhoneTwoToneIcon/></strong> (254) 456-7890
+          <strong><LocalPhoneTwoToneIcon/></strong> 0710 300811/0722 614589
         </p>
         <p>
           <strong><EmailTwoToneIcon/></strong> info@prescom.com
@@ -65,7 +65,7 @@ const Form = styled.form`
 const FormTitle = styled.h2`
   font-size: 2rem;
   margin-bottom: 1rem;
-  color:#0077cc
+  color:#0077cc;
 `;
 
 const FormField = styled.div`

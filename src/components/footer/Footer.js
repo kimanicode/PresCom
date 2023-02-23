@@ -125,7 +125,7 @@ const Footer = () => {
             <Heading>Quick Links</Heading>
             <List className="list-unstyled">
               <ListItem>
-                <Link href="#">About Us</Link>
+                <Link>About Us</Link>
               </ListItem>
               <ListItem>
                 <Link href="#">Our Services</Link>

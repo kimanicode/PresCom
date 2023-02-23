@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
+
 
 import Logo from './image1.jpg';
 
@@ -19,16 +20,26 @@ const Header = () => {
       <NavContainer open={isMobileMenuOpen}>
         <NavList>
           <NavItem>
-            <NavLink href="#">Home</NavLink>
+            <NavLink><Link to="Banner" smooth={true} duration={500}>Home</Link>
+          </NavLink>
+          
           </NavItem>
           <NavItem>
-            <NavLink href="#">About</NavLink>
+            <NavLink><Link to="Projects" smooth={true} duration={500}>Projects</Link></NavLink>
+          
+          </NavItem>
+          
+          
+          <NavItem>
+            <NavLink ><Link to="Services" smooth={true} duration={500}>Services</Link></NavLink>
+          </NavItem>
+
+          <NavItem>
+            <NavLink><Link to="About" smooth={true} duration={500}>About</Link></NavLink>
+          
           </NavItem>
           <NavItem>
-            <NavLink href="#">Services</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#">Contact</NavLink>
+            <NavLink ><Link to="Contact" smooth={true} duration={500}>Contact Us</Link></NavLink>
           </NavItem>
         </NavList>
       </NavContainer>
@@ -103,6 +114,7 @@ const NavLink = styled.a`
   &:hover{
     color: #E98A15;
   }
+  cursor:pointer;
 `;
 
 const MenuButton = styled.button`

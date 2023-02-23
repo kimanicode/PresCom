@@ -6,15 +6,34 @@ import './App.css';
 import Projects from './components/projects/Projects';
 import ContactUs from './components/contact/ContactUs';
 import Footer from './components/footer/Footer';
+import Services from './components/services/Services';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Banner/>
-      <Projects />
-      <About />
-      <ContactUs />
+      <div id='Banner'>
+         <Banner/>
+      </div>
+      
+     
+      <div id="Projects">
+        <Projects />
+      </div>
+      <div id='Services'>
+        <Services/>
+        
+      </div>
+
+      
+      <div id="About">
+         <About />
+      </div>
+      <div id='Contact'>
+        <ContactUs/>
+        
+      </div>
+      
       <Footer />
       
       
