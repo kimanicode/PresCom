@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'react-scroll';
-
-
+import { bubble as Menu } from 'react-burger-menu'
+import './menu.css'
 import Logo from './image1.jpg';
 
 const Header = () => {
@@ -16,8 +16,11 @@ const Header = () => {
     <HeaderContainer>
       <LogoContainer>
         <LogoImg src={Logo} alt="Prescom" />
+        <Info>PresCom</Info>
       </LogoContainer>
-      <NavContainer open={isMobileMenuOpen}>
+      
+      <NavContainer >
+        
         <NavList>
           <NavItem>
             <NavLink><Link to="Banner" smooth={true} duration={500}>Home</Link>
@@ -42,12 +45,40 @@ const Header = () => {
             <NavLink ><Link to="Contact" smooth={true} duration={500}>Contact Us</Link></NavLink>
           </NavItem>
         </NavList>
+       
       </NavContainer>
-      <MenuButton open={isMobileMenuOpen} onClick={toggleMobileMenu}>
-        <MenuLine className="menu-line-1" />
-        <MenuLine className="menu-line-2" />
-        <MenuLine className="menu-line-3" />
-      </MenuButton>
+      <Menu right>
+
+      
+        
+        <NavList>
+          <NavItem>
+            <NavLink><Link to="Banner" smooth={true} duration={500}>Home</Link>
+          </NavLink>
+          
+          </NavItem>
+          <NavItem>
+            <NavLink><Link to="Projects" smooth={true} duration={500}>Projects</Link></NavLink>
+          
+          </NavItem>
+          
+          
+          <NavItem>
+            <NavLink ><Link to="Services" smooth={true} duration={500}>Services</Link></NavLink>
+          </NavItem>
+
+          <NavItem>
+            <NavLink><Link to="About" smooth={true} duration={500}>About</Link></NavLink>
+          
+          </NavItem>
+          <NavItem>
+            <NavLink ><Link to="Contact" smooth={true} duration={500}>Contact Us</Link></NavLink>
+          </NavItem>
+        </NavList>
+       
+      
+      </Menu>
+     
     </HeaderContainer>
   );
 };
@@ -59,6 +90,7 @@ const HeaderContainer = styled.header`
   padding: 1rem;
   background-color: #50B2C0;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  
 `;
 
 const LogoContainer = styled.div`
@@ -69,6 +101,17 @@ const LogoContainer = styled.div`
 const LogoImg = styled.img`
   height: 50px;
   border-radius:50%;
+  @media screen and (max-width: 768px) {
+    display:none;
+  }
+`;
+const Info = styled.span`
+  padding: 4px;
+  color:#fff08f;
+  font-size : 24px;
+  
+
+
 `;
 
 const NavContainer = styled.nav`
@@ -78,19 +121,9 @@ const NavContainer = styled.nav`
   width: 100%;
   background-color: #50B2C0;
   display: none;
+  
+ 
 
-  ${({ open }) =>
-    open &&
-    css`
-      display: block;
-    `}
-
-  @media screen and (min-width: 768px) {
-    position: static;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
 `;
 
 const NavList = styled.ul`
@@ -117,47 +150,6 @@ const NavLink = styled.a`
   cursor:pointer;
 `;
 
-const MenuButton = styled.button`
-  position: relative;
-  display: none;
-  width: 30px;
-  height: 20px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
 
-  ${({ open }) =>
-    open &&
-    css`
-      .menu-line-1 {
-        transform: rotate(45deg);
-        top: 50%;
-      }
-
-      .menu-line-2 {
-        opacity: 0;
-      }
-
-      .menu-line-3 {
-        transform: rotate(-45deg);
-        top: 50%;
-      }
-    `}
-
-  @media screen and (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-`;
-
-const MenuLine = styled.div`
-  width: 100%;
-  height: 2px;
-  background-color: #333;
-  transition: transform 0.3s ease-out;
-
-`
 
 export default Header;
