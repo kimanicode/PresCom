@@ -140,7 +140,7 @@ const NavItem = styled.li`
 
 const NavLink = styled.a`
   display: block;
-  color:#202C59;
+  color:white;
   font-weight:bold;
   font-size: 18px;
   text-decoration: none;
