@@ -1,16 +1,12 @@
-import React, { useState } from 'react';
-import styled, { css } from 'styled-components';
+import React from 'react';
+import styled from 'styled-components';
 import { Link } from 'react-scroll';
 import { bubble as Menu } from 'react-burger-menu'
 import './menu.css'
-import Logo from './image1.jpg';
+import Logo from './pcom.png';
 
 const Header = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+  
 
   return (
     <HeaderContainer>
@@ -90,7 +86,7 @@ const HeaderContainer = styled.header`
   padding: 1rem;
   background-color: #50B2C0;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  
+  position: relative;  
 `;
 
 const LogoContainer = styled.div`

@@ -5,6 +5,8 @@ const ServicesWrapper = styled.div`
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 gap: 2rem;
+background-color:#253031;
+margin-top:10px;
 `;
 
 const ServiceHeader = styled.h1`
@@ -20,6 +22,7 @@ const ServiceCard = styled.div`
   align-items: center;
   padding: 1rem;
   margin: 1rem;
+  background-color:#fff;
   border-radius: 0.5rem;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;

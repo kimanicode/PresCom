@@ -3,7 +3,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-
+import Logo from '../home/pcom.png';
 
 const FooterWrapper = styled.footer`
   background-color: #333;
@@ -43,6 +43,13 @@ const Heading = styled.h4`
 
 const Text = styled.p`
   color: #fff;
+`;
+const FooterLogo = styled.div`
+  margin-top: 10px;
+  @media screen and (max-width: 768px) {
+    display:none;
+  }
+
 `;
 
 const List = styled.ul`
@@ -91,6 +98,7 @@ const Footer = () => {
           <Col>
             <Heading>Prescom</Heading>
             <Text>Your trusted partner in networking <br></br>and telecommunications.</Text>
+            <FooterLogo><img src={Logo}/></FooterLogo>
           </Col>
           <Col>
             <Heading>Connect with us</Heading>
