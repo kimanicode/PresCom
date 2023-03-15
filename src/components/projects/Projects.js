@@ -91,8 +91,10 @@ const ProjectsList = styled.div`
 
 const ProjectCard = styled.div`
   border: 1px solid #ccc;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   overflow: hidden;
+  background-color: #f2f2f2;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   
 `;
 

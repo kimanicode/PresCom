@@ -39,6 +39,7 @@
   
   .hero-button:hover {
     background-color: #FFB17A;
+    color:black;
   }
   
   .hero-image {

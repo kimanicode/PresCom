@@ -103,8 +103,9 @@ const LogoImg = styled.img`
 `;
 const Info = styled.span`
   padding: 4px;
-  color:#fff08f;
+  color:#253031;
   font-size : 24px;
+  font-weight: bold;
   
 
 
