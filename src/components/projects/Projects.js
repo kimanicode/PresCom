@@ -79,7 +79,7 @@ const ProjectsHeader = styled.h1`
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
-  color:#0077cc
+  color:#253031;
 `;
 
 const ProjectsList = styled.div`
@@ -90,7 +90,7 @@ const ProjectsList = styled.div`
 `;
 
 const ProjectCard = styled.div`
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 0.5rem;
   overflow: hidden;
   background-color: #f2f2f2;

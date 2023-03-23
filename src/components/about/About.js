@@ -47,7 +47,7 @@ const AboutHeader = styled.h1`
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
-  color:#0077cc
+  color:#253031;
 `;
 
 const AboutSection = styled.div`

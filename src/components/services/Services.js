@@ -11,7 +11,7 @@ margin-top:10px;
 
 const ServiceHeader = styled.h1`
    text-align:center;
-   color:#0077cc;
+   color:#253031;
 
 
 `;

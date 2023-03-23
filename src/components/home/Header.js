@@ -6,6 +6,8 @@ import './menu.css'
 import Logo from './pcom.png';
 
 const Header = () => {
+
+  
   
 
   return (
@@ -97,15 +99,14 @@ const LogoContainer = styled.div`
 const LogoImg = styled.img`
   height: 50px;
   border-radius:50%;
-  @media screen and (max-width: 768px) {
-    display:none;
-  }
+ 
 `;
 const Info = styled.span`
   padding: 4px;
   color:#253031;
   font-size : 24px;
   font-weight: bold;
+  font-style: italic;
   
 
 

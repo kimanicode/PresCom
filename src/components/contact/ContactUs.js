@@ -2,25 +2,66 @@ import styled from "styled-components";
 import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
 import LocalPhoneTwoToneIcon from '@mui/icons-material/LocalPhoneTwoTone';
 import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone';
+import { useState } from "react";
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [success, setSuccess] = useState(false)
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); 
+    console.log(formData); // Do something with the form data
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    })
+    setSuccess(true)
+    
+  };
+
   return (
     <Container>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <FormTitle>Contact Us</FormTitle>
         <FormField>
           <Label>Name</Label>
-          <Input type="text" />
+          <Input type="text"
+           name="name"
+          value={formData.name}
+          onChange={handleInputChange}
+          />
+
         </FormField>
         <FormField>
           <Label>Email</Label>
-          <Input type="email" />
+          <Input type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+           />
         </FormField>
         <FormField>
           <Label>Message</Label>
-          <TextArea></TextArea>
+          <TextArea 
+          name="message"
+          value={formData.message}
+          onChange={handleInputChange}>
+          
+          </TextArea>
+
         </FormField>
         <SubmitButton>Submit</SubmitButton>
+        {success && <Success>Message sent successfully </Success>}
       </Form>
       <ContactInfo>
         <ContactInfoTitle>Contact Information</ContactInfoTitle>
@@ -65,7 +106,7 @@ const Form = styled.form`
 const FormTitle = styled.h2`
   font-size: 2rem;
   margin-bottom: 1rem;
-  color:#0077cc;
+  color:#253031;
 `;
 
 const FormField = styled.div`
@@ -111,6 +152,11 @@ const SubmitButton = styled.button`
   &:hover {
     background-color: #005ea3;
   }
+`;
+const Success = styled.p`
+  color: green;
+  padding:4px;
+  font-weight: bold;
 `;
 
 const ContactInfo = styled.div`
